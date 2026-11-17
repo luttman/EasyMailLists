@@ -1,0 +1,12 @@
+## Interface: 16001
+## Title: EasyMail Lists
+## Author: Pyralis (Plain AutoMail), forked as EasyMail Lists
+## Version: 2.0.0
+## Notes: Make simple lists to automatically mail items to your characters. A fork of Plain AutoMail.
+## SavedVariables: EasyMailListsSave
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## IconTexture: Interface\AddOns\EasyMailLists\Icon
+
+EasyMailLists.lua
+Settings.lua
