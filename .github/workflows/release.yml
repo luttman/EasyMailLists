@@ -18,10 +18,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      # -t: the addon is in the EasyMailLists folder, not at the top of the repository
+      # The addon is in the EasyMailLists folder, but the packager wants the TOC at the top of a checkout.
+      # Stage a copy: the addon files at the top, with the repository's git data so it can find the tag.
+      # "git add" only marks the copied files as tracked, so the packager doesn't skip them.
+      - name: Stage the addon
+        run: |
+          mkdir ../stage
+          cp -r .git ../stage/.git
+          cp -r EasyMailLists/. ../stage/
+          git -C ../stage add -A
+
       - uses: BigWigsMods/packager@v2
         with:
-          args: -t EasyMailLists
+          args: -t ../stage
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

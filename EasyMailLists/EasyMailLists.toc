@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: EasyMail Lists
 ## Author: Pyralis (Plain AutoMail), forked as EasyMail Lists
-## Version: 2.0.1
+## Version: 2.0.2
 ## X-Curse-Project-ID: 1812698
 ## Notes: Make simple lists to automatically mail items to your characters. A fork of Plain AutoMail.
 ## SavedVariables: EasyMailListsSave
